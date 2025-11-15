@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture mots flash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<div class="container">
+    <h1>⚡ Entraînement Lecture Flash</h1>
+    <div class="setup-screen active">
+        <div style="margin-bottom: 20px;">
+            <label>Listes prédéfinies </label>
+            <div id="checkboxContainer">
+                <label>
+                    <input type="checkbox" value="ce1">
+                    <span>Mots CE1</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ce1-outils">
+                    <span>Mots outils CE1</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ce2">
+                    <span>Mots CE2</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ce2-outils">
+                    <span>Mots outils CE2</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="cm1">
+                    <span>Mots CM1</span>
+                </label>
+            </div>
+            <div id="loadingStatus"></div>
+        </div>
+
+        <label for="wordInput">Liste de mots (un mot par ligne)</label>
+        <textarea id="wordInput" placeholder="Sélectionnez des listes ci-dessus ou entrez vos mots ici...
+Un mot par ligne"></textarea>
+
+        <div class="speed-control">
+            <label for="speedRange">Vitesse d'affichage</label>
+            <input type="range" id="speedRange" min="1" max="10" value="2">
+            <div class="speed-value"><span id="speedValue">2</span> secondes</div>
+        </div>
+
+        <button class="btn-start" id="startBtn">Commencer</button>
+    </div>
+
+    <div class="reading-screen">
+        <div class="progress" id="progress"></div>
+        <div class="word-display">
+            <div class="word" id="wordDisplay"></div>
+        </div>
+        <button class="btn-next" id="nextBtn">Mot suivant ✓</button>
+        <button class="btn-stop" id="stopBtn">Arrêter</button>
+    </div>
+</div>
+
+<script type="application/javascript" src="words.js"></script>
+<script type="application/javascript" src="app.js"></script>
+</body>
+</html>
