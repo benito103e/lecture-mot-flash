@@ -55,7 +55,7 @@ startBtn.addEventListener('click', () => {
 
     words = words.sort(() => Math.random() - 0.5);
 
-    displayTime = parseInt(speedRange.value) * 1000;
+    displayTime = parseFloat(speedRange.value) * 1000;
     currentIndex = 0;
 
     setupScreen.classList.remove('active');
